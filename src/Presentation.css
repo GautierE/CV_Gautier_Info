@@ -1,0 +1,39 @@
+
+.contact
+{
+    margin-top: 150px;
+    margin-right: 50px;
+}
+
+.title_coordonnees
+{
+    font-size: 60px;
+}
+
+.name
+{
+    font-size: 60px;
+}
+
+.presentation
+{
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: space-between;
+}
+
+.photo
+{
+    width: 250px;
+    height: 250px;
+    margin-left: 700px;
+    margin-top: -150px;
+}
+
+.intro
+{
+}
+
+.presentation_text
+{
+}

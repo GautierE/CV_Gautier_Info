@@ -1,5 +1,9 @@
-.App {
-  text-align: center;
+
+
+.app {
+  font-family: "Century Gothic", sans-serif;
+  font-size: 30px;
+  background: linear-gradient(rebeccapurple, white);
 }
 
 .App-logo {
