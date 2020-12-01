@@ -1,10 +1,7 @@
 import './App.css';
 import './Experience.css';
 import React, {Component} from "react";
-
-import upArrow from './Images/up_arrow.png';
-import downArrow from './Images/down_arrow.png';
-
+import Carousel from 'react-elastic-carousel';
 
 import Presentation from './Presentation.js';
 import Skills from './Skills';
@@ -35,19 +32,32 @@ class App extends Component {
                 </div>
 
                 {
-                    <divc className={'experience_section'}>
-                        <Arrows handleArrowClick={this.handleArrowClick}/>
-                        <Experience experienceArray={experienceArray} selectedIndex={experienceArraySelectedIndex}/>
-                    </divc>
+                    <div className={'experience_section'}>
+                        <Experience experienceArray={experienceArray} selectedIndex={experienceArraySelectedIndex} handleArrowClick={this.handleArrowClick} />
+                    </div>
                 }
 
-                {/*<div>
+                <div>
                     <Skills/>
                 </div>
 
                 <div>
                     <Hobbies/>
-                </div>*/}
+                </div>
+
+                <ul className="box-area">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
 
             </div>
         )
@@ -71,30 +81,33 @@ class App extends Component {
     }
 }
 
-// Carousel + overflow hidden dans le parent
-const Experience = ({experienceArray, selectedIndex}) =>
+const breakPoints = [
+    {width: 1, itemsToShow: 1},
+    {width: 500, itemsToShow: 2},
+    {width: 1200, itemsToShow: 3},
+]
+
+const Experience = ({experienceArray, selectedIndex, handleArrowClick}) =>
     (
         <>
             <div className={'experience'}>
-                <h3 className={'title'}>Expérience</h3>
-                {
-                    experienceArray.map((stage, index) => (
-                        <div className={'stage'}>
-                            <p key={index} className={'stage_name'}>{stage[0]}</p>
-                            <p key={index} className={'stage_date'}>{stage[2]}</p>
-                        </div>
-                    ))
-                }
+                <h3 className={'title_exp'}>Expériences</h3>
+                <div className={'carousel'}>
+                    <Carousel breakPoints={breakPoints} verticalMode={true}>
+                        {
+                            experienceArray.map((stage, index) => (
+                                <div className={'carousel_item'} key={index} onClick={() => handleArrowClick(index)}>
+                                    <p className={'stage_name'}>{stage[0]}</p>
+                                    <p className={'stage_date'}>{stage[2]}</p>
+                                </div>
+                            ))
+                        }
+                    </Carousel>
+                    <p className={'description'}>{experienceArray[selectedIndex][1]}</p>
+                </div>
+
             </div>
-            <p className={'description'}>{experienceArray[selectedIndex][1]}</p>
         </>
     )
-
-const Arrows = ({handleArrowClick}) => (
-    <div className={'arrows'}>
-        <img src={upArrow} alt={"Up arrow"} onClick={() => handleArrowClick(-1)} className={'arrow'}/>
-        <img src={downArrow} alt={"Down arrow"} onClick={() => handleArrowClick(1)} className={'arrow'}/>
-    </div>
-)
 
 export default App;

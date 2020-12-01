@@ -1,0 +1,60 @@
+.hobbies
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.title_loisirs
+{
+    font-size: 60px;
+    margin-left: 20px;
+}
+
+.skate_photo {
+    height: 550px;
+    width: 450px;
+
+    border-radius: 60px;
+    border-style: solid;
+    border-color: rgba(210, 218, 226, 1.0);
+    border-width: 7px;
+    margin-bottom: 10px;
+}
+
+.fn_photo
+{
+    width: 450px;
+    height: 438px;
+    border-radius: 60px;
+    border-style: solid;
+    border-color: rgba(210, 218, 226, 1.0);
+    border-width: 7px;
+}
+
+.skate
+{
+    margin-left: 20px;
+}
+
+.video_games{
+    margin-left: 20px;
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+}
+
+.desc{
+    width: 450px;
+    text-align: justify-all;
+    align-self: center;
+    margin-left: 20px;
+}
+
+.desc_games
+{
+    align-self: center;
+    margin-left: 20px;
+}
