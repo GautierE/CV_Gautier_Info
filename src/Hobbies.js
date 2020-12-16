@@ -8,7 +8,7 @@ const Hobbies = () => (
         <h3 className={'title_loisirs'}>Loisirs</h3>
         <div className={'hobbies'}>
             <div className={'skate'}>
-                <h4>Le skate</h4>
+                <h4 className={'hobby_title'}>Le skate</h4>
                 <div className={'content'}>
                     <img className={'skate_photo'} src={skatePhoto} alt={'Skate'}/>
                     <p className={'desc'}>J'ai une passion pour le skate
@@ -26,7 +26,7 @@ const Hobbies = () => (
             </div>
 
             <div className={'video_games'}>
-                <h4>Jeux-vidéos compétitifs</h4>
+                <h4 className={'hobby_title'}>Jeux-vidéos compétitifs</h4>
                 <div className={'content'}>
                     <img className={'fn_photo'} src={Fncs} alt={'FNCS logo'}/>
                     <p className={'desc_games'}>

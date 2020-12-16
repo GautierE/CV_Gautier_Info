@@ -1,7 +1,7 @@
 
 .contact
 {
-    margin-right: 50px;
+    margin-right: 20px;
     align-self: flex-end;
     margin-bottom: -250px;
 }
@@ -9,6 +9,7 @@
 .title_coordonnees
 {
     font-size: 60px;
+    color: rgba(223, 249, 251, 0.9);
 }
 
 .name
@@ -16,6 +17,8 @@
     font-size: 150px;
     margin-left: 50px;
     margin-top: 150px;
+    color: rgba(223, 249, 251, 0.9);
+
 }
 
 .presentation
@@ -33,7 +36,7 @@
     height: 250px;
     border-radius: 150px;
     border-style: solid;
-    border-color: rgba(210, 218, 226, 1.0);
+    border-color: #25CCF7;
     border-width: 7px;
 }
 
@@ -48,4 +51,19 @@
 {
     margin-top: 50px;
     margin-left: 150px;
+}
+
+.contact ul li
+{
+    list-style-type: none;
+}
+
+.email::before{
+    content: url("./Images/email_icon.PNG");
+    margin-right: 20px;
+}
+
+.phone::before{
+    content: url("./Images/phone_icon.PNG");
+    margin-right: 20px;
 }

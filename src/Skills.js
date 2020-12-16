@@ -1,5 +1,6 @@
 import React from "react";
 import './Skills.css';
+import {PieChart} from 'react-minimal-pie-chart';
 
 import bash from "./Programming_languages_icons/Bash_icon.png";
 import c from "./Programming_languages_icons/C_icon.png";
@@ -11,14 +12,13 @@ import js from "./Programming_languages_icons/Js_icon.png";
 import laravel from "./Programming_languages_icons/Laravel_icon.png";
 import winform from "./Programming_languages_icons/Net_icon.png";
 import oracle from "./Programming_languages_icons/Oracle_icon.png";
-import php from "./Programming_languages_icons/PHP_icon.svg";
+import php from "./Programming_languages_icons/PHP_icon.png";
 import react from "./Programming_languages_icons/React_icon.png";
 import unity from "./Programming_languages_icons/Unity_icon.png";
 import uml from "./Programming_languages_icons/UML_icon.png";
-// uml
 
 const Skills = () => {
-    const iconsArray = [bash, c, cSharp, css, html, java, js, laravel, winform, oracle, php, react, unity, uml]
+    const iconsArray = [react, js, css, html, php, laravel, cSharp, java, bash, c, winform, oracle,  unity, uml]
 
     const ProgrammingLanguages = ({iconsArray}) => (
         <div>
@@ -35,8 +35,22 @@ const Skills = () => {
 
     const SpokenLanguages = () => (
         <div className={'languages'}>
-            <h3 className={'language_title'}>Langues parlées:</h3>
-            <p>Anglais courant (895 TOEIC)</p>
+            <h3 className={'language_title'}>Langue étrangère</h3>
+            <p>Anglais courant, TOEIC:</p>
+            <PieChart
+                data={[{ value: 895, color: 'rgba(153, 128, 250, 0.8)' }]}
+                totalValue={990}
+                lineWidth={25}
+                label={({ dataEntry }) => dataEntry.value}
+                labelStyle={{
+                    fontSize: '32px',
+                    fill: 'rgba(237, 76, 103, 0.9)',
+
+                }}
+                labelPosition={0}
+                viewBoxSize={[150,150]}
+                center={[50, 50]}
+            />
         </div>
     )
 

@@ -28,6 +28,8 @@
 {
     font-size: 60px;
     margin-left: 20px;
+    color: rgba(223, 249, 251, 0.9);
+
 }
 
 .skills
@@ -41,10 +43,14 @@
 {
     align-self: flex-start;
     width: 70%;
-
 }
 
 .language_title
 {
     font-size: 60px;
+    color: rgba(223, 249, 251, 0.9);
+}
+
+div.languages>svg>text{
+    margin-bottom: 100px;
 }

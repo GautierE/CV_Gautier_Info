@@ -9,6 +9,7 @@
 {
     font-size: 60px;
     margin-left: 20px;
+    color: rgba(223, 249, 251, 0.9);
 }
 
 .skate_photo {
@@ -57,4 +58,8 @@
 {
     align-self: center;
     margin-left: 20px;
+}
+
+.hobby_title{
+    color: rgba(223, 249, 251, 0.9);
 }

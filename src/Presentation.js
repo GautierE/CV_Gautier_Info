@@ -7,8 +7,8 @@ const Presentation = () => {
         <div className={'contact'}>
             <h3 className={'title_coordonnees'}>Coordonnées</h3>
             <ul>
-                <li>gautier.edel66@gmail.com</li>
-                <li>+33 6 98 67 45 73</li>
+                <li className={'email'}>gautier.edel.info@gmail.com</li>
+                <li className={'phone'}>+33 6 98 67 45 73</li>
             </ul>
         </div>
     )
@@ -17,7 +17,7 @@ const Presentation = () => {
         <div className={'intro'}>
             <h2 className={'name'}>Gautier EDEL</h2>
             <img src={photo} alt={'Presentation'} className={'photo'}/>
-            <p className={'presentation_text'}>Texte de présentation.</p>
+            <p className={'presentation_text'}>Date de naissance: 26/01/2002 <br/>Permis B2</p>
         </div>
     )
 
