@@ -1,9 +1,8 @@
 
 .contact
 {
-    margin-right: 20px;
+    margin-right: 1.5vh;
     align-self: flex-end;
-    margin-bottom: -250px;
 }
 
 .title_coordonnees
@@ -14,11 +13,9 @@
 
 .name
 {
-    font-size: 150px;
-    margin-left: 50px;
-    margin-top: 150px;
+    font-size: 15vh;
+    margin-left: 5vh;
     color: rgba(223, 249, 251, 0.9);
-
 }
 
 .presentation
@@ -28,12 +25,36 @@
     justify-content: space-between;
 }
 
+@media(max-width: 1700px) {
+    .presentation
+    {
+        flex-direction: column-reverse;
+    }
+
+    .name
+    {
+        margin-block-end: 0.2rem;
+        text-align: start;
+        font-size: 12vh;
+    }
+
+    .title_coordonnees
+    {
+        margin-left: 5vh;
+    }
+
+    .contact
+    {
+        align-self: flex-start;
+    }
+}
+
 .photo
 {
     align-self: center;
-    margin-left: 70px;
-    width: 250px;
-    height: 250px;
+    width: 25vh;
+    height: 25vh;
+    margin-left: 5vh;
     border-radius: 150px;
     border-style: solid;
     border-color: #25CCF7;
@@ -49,8 +70,7 @@
 
 .presentation_text
 {
-    margin-top: 50px;
-    margin-left: 150px;
+    margin-left: 15vh;
 }
 
 .contact ul li

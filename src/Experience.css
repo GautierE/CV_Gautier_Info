@@ -1,20 +1,18 @@
 .title_exp
 {
     font-size: 60px;
-    margin-bottom: 100px;
-    margin-left: 20px;
+    margin-left: 5vh;
     color: rgba(223, 249, 251, 0.9);
 }
 
 .description{
-    height: 200px;
-    width: 1400px;
-    align-self: center;
+    height: 170px;
     white-space: normal;
 }
 
 .experience{
-    padding-top: 250px;
+    padding-top: 50px;
+    overflow: hidden;
 }
 
 .carousel_item {
@@ -26,8 +24,6 @@
     background-color: rgba(210, 218, 226, 0.8);
     padding: 10px;
 }
-
-
 
 .stage_name{
     display: flex;
@@ -43,7 +39,19 @@
 
 .carousel{
     display: flex;
-    margin-left: 20px;
+    margin-left: 2vh;
+}
+
+@media(max-width: 1200px) {
+    .carousel
+    {
+        flex-direction: column;
+    }
+
+    .description
+    {
+        text-align: center;
+    }
 }
 
 .rec.rec-slider-container{

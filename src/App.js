@@ -46,7 +46,7 @@ class App extends Component {
                     <Hobbies/>
                 </div>
 
-                <ul className="box-area">
+                {/*<ul className="box-area">
                     <li></li>
                     <li></li>
                     <li></li>
@@ -58,7 +58,7 @@ class App extends Component {
                     <li></li>
                     <li></li>
                     <li></li>
-                </ul>
+                </ul>*/}
 
             </div>
         )
