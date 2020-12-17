@@ -12,7 +12,6 @@
 
 .experience{
     padding-top: 50px;
-    overflow: hidden;
 }
 
 .carousel_item {
@@ -61,4 +60,9 @@
 .rec.rec-pagination
 {
     opacity: 0;
+}
+
+.rec.rec-carousel-wrapper
+{
+    overflow: hidden;
 }
