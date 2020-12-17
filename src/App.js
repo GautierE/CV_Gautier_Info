@@ -46,20 +46,6 @@ class App extends Component {
                     <Hobbies/>
                 </div>
 
-                {/*<ul className="box-area">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>*/}
-
             </div>
         )
     }
