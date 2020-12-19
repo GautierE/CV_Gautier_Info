@@ -1,7 +1,7 @@
 import './App.css';
 import './Experience.css';
 import React, {Component} from "react";
-import Carousel  from 'react-elastic-carousel';
+import Carousel from 'react-elastic-carousel';
 
 import Presentation from './Presentation.js';
 import Skills from './Skills';
@@ -27,25 +27,27 @@ class App extends Component {
         const {experienceArray, experienceArraySelectedIndex} = this.state;
         return (
             <div className={'app'}>
-                <div>
-                    <Presentation/>
-                </div>
-
-                {
-                    <div className={'experience_section'}>
-                        <Experience experienceArray={experienceArray} selectedIndex={experienceArraySelectedIndex}
-                                    handleArrowClick={this.handleArrowClick}/>
+                <header className={'header'}>
+                    <div className="background"></div>
+                </header>
+                    <div>
+                        <Presentation/>
                     </div>
-                }
 
-                <div>
-                    <Skills/>
-                </div>
+                    {
+                        <div className={'experience_section'}>
+                            <Experience experienceArray={experienceArray} selectedIndex={experienceArraySelectedIndex}
+                                        handleArrowClick={this.handleArrowClick}/>
+                        </div>
+                    }
 
-                <div>
-                    <Hobbies/>
-                </div>
+                    <div>
+                        <Skills/>
+                    </div>
 
+                    <div>
+                        <Hobbies/>
+                    </div>
             </div>
         )
     }
