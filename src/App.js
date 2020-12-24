@@ -27,27 +27,28 @@ class App extends Component {
         const {experienceArray, experienceArraySelectedIndex} = this.state;
         return (
             <div className={'app'}>
+                {/* Empty div used for background */}
                 <header className={'header'}>
                     <div className="background"></div>
                 </header>
-                    <div>
-                        <Presentation/>
-                    </div>
+                <div>
+                    <Presentation/>
+                </div>
 
-                    {
-                        <div className={'experience_section'}>
-                            <Experience experienceArray={experienceArray} selectedIndex={experienceArraySelectedIndex}
-                                        handleArrowClick={this.handleArrowClick}/>
-                        </div>
-                    }
-
-                    <div>
-                        <Skills/>
+                {
+                    <div className={'experience_section'}>
+                        <Experience experienceArray={experienceArray} selectedIndex={experienceArraySelectedIndex}
+                                    handleArrowClick={this.handleArrowClick}/>
                     </div>
+                }
 
-                    <div>
-                        <Hobbies/>
-                    </div>
+                <div>
+                    <Skills/>
+                </div>
+
+                <div>
+                    <Hobbies/>
+                </div>
             </div>
         )
     }
@@ -56,6 +57,7 @@ class App extends Component {
         this.setState({experienceArraySelectedIndex: this.limitIndexValue(indexModifier)})
     }
 
+    /* Returns an index in the bounds of the experiences array  */
     limitIndexValue = indexModifier => {
         const {experienceArray, experienceArraySelectedIndex} = this.state
         let newIndex = experienceArraySelectedIndex + indexModifier
@@ -106,7 +108,6 @@ const Experience = ({experienceArray, selectedIndex, handleArrowClick}) =>
                         }
                     </p>
                 </div>
-
             </div>
         </>
     )
