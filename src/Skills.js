@@ -35,8 +35,9 @@ const Skills = () => {
 
     const SpokenLanguages = () => (
         <div className={'languages'}>
-            <h3 className={'language_title'}>Langue étrangère</h3>
-            <p>Anglais courant, TOEIC:</p>
+            <h3 className={'language_title'}>Langues étrangères</h3>
+            <p>- Allemand basique (niveau lycée)</p>
+            <p>- Anglais courant, TOEIC:</p>
             <PieChart
                 data={[{ value: 895, color: 'rgba(153, 128, 250, 0.8)' }]}
                 totalValue={990}

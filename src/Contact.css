@@ -1,0 +1,23 @@
+.contact p
+{
+    display: inline;
+    font-size: 40px;
+}
+
+.title_coordonnees
+{
+    font-size: 60px;
+    margin-left: 5vh;
+}
+
+.email::before{
+    content: url("./Images/email_icon.PNG");
+    margin-left: 50px;
+    padding-right: 20px;
+}
+
+.phone::before{
+    content: url("./Images/phone_icon.PNG");
+    margin-left: 50px;
+    padding-right: 20px;
+}

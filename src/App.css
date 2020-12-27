@@ -1,10 +1,11 @@
 .app {
   font-family: "Century Gothic", sans-serif;
   font-size: 30px;
+  color:  rgba(223, 249, 251, 0.9);;
   width: 100%;
   height: 100%;
   z-index: -10;
-  background-color: rgba(75, 207, 250,0.5);
+  background-color: rgba(83, 82, 237,0.9);
   overflow: hidden;
 }
 
@@ -24,6 +25,12 @@
   top: 0;
   left: -1800px;
   z-index: -1;
+}
+
+h3
+{
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
 }
 
 @keyframes cloud {

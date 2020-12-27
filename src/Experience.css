@@ -1,26 +1,32 @@
-.title_exp
+.title_parcours
 {
     font-size: 60px;
     margin-left: 5vh;
-    color: rgba(223, 249, 251, 0.9);
+}
+
+.parcours_title
+{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
 }
 
 .description{
-    height: 170px;
-    white-space: normal;
+    height: 150px;
+    text-align: center;
 }
 
-.experience{
-    padding-top: 50px;
+.parcours{
+    display: flex;
 }
 
 .carousel_item {
     width: 100%;
     border-width: 7px;
     border-style: solid;
-    border-color: #2c3e50;
+    border-color: rgba(223, 249, 251, 0.9);
     border-radius: 10%;
-    background-color: rgba(210, 218, 226, 0.8);
+    background-color: rgba(55, 66, 250,0.6);
     padding: 10px;
 }
 
@@ -37,12 +43,11 @@
 }
 
 .carousel{
-    display: flex;
     margin-left: 2vh;
 }
 
 @media(max-width: 1200px) {
-    .carousel
+    .parcours
     {
         flex-direction: column;
     }

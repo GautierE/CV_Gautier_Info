@@ -13,32 +13,34 @@ const Hobbies = () => (
                     <img className={'skate_photo'} src={skatePhoto} alt={'Skate'}/>
                     <p className={'desc'}>J'ai une passion pour le skate
                         <br/>
-                        depuis 4 ans maintenant.
+                        depuis 4 ans.
                         <br/>
                         <br/>
-                        Ce sport nécessite beaucoup
+                        Ce sport m'a permis de développer ma persévérance
                         <br/>
-                        de persévérance, de précision
-                        <br/>
-                        et de régularité pour progresser.
+                        et ma précision.
                     </p>
                 </div>
             </div>
 
             <div className={'video_games'}>
-                <h4 className={'hobby_title'}>Jeux-vidéos compétitifs</h4>
+                <h4 className={'hobby_title'}>Jeux-vidéos compétitifs & Modération</h4>
                 <div className={'content'}>
                     <img className={'fn_photo'} src={Fncs} alt={'FNCS logo'}/>
                     <p className={'desc_games'}>
-                        Les jeux compétitifs m'intéressent depuis toujours,
+                        Fortnite:
                         <br/>
-                        surtout le fait de devoir s'entraîner
+                        Collaboration avec des inconnus pour atteindre un but commun.
                         <br/>
-                        pour devenir meilleur que les autres
                         <br/>
-                        joueurs ainsi que la collaboration
+                        Modération Garry's Mod:
                         <br/>
-                        de l'équipe permettant la victoire.</p>
+                        3h/jour pendant un an
+                        <br/>
+                        Résolution des conflits entre joueurs
+                        <br/>
+                        Respect d'une organisation hiérarchique
+                    </p>
                 </div>
             </div>
         </div>

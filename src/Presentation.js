@@ -3,27 +3,24 @@ import './Presentation.css';
 import photo from './Images/photo.jpg';
 
 const Presentation = () => {
-    const ContactDetails = () => (
-        <div className={'contact'}>
-            <h3 className={'title_coordonnees'}>Coordonnées</h3>
-            <ul>
-                <li className={'email'}>gautier.edel.info@gmail.com</li>
-                <li className={'phone'}>+33 6 98 67 45 73</li>
-            </ul>
-        </div>
-    )
-
     const Intro = () => (
         <div className={'intro'}>
-            <h2 className={'name'}>Gautier EDEL</h2>
-            <img src={photo} alt={'Presentation'} className={'photo'}/>
-            <p className={'presentation_text'}>Date de naissance: 26/01/2002 <br/>Permis B2</p>
+            <div className={'title'}>
+                <h2 className={'name'}>Stage Web</h2>
+                <img src={photo} alt={'Presentation'} className={'photo'}/>
+            </div>
+            <p className={'presentation_text'}>
+                Gautier EDEL, 26/01/2002, Permis B2<br/>
+                <br/>
+                Étudiant en deuxième année de DUT Informatique,<br/>
+                je recherche un stage de dix semaines dans le domaine<br/>
+                du Web afin de pouvoir finaliser mon DUT.
+            </p>
         </div>
     )
 
     return (
         <div className={'presentation'}>
-            <ContactDetails />
             <Intro />
         </div>
     )

@@ -1,28 +1,11 @@
-
-.contact
-{
-    margin-right: 1.5vh;
-    align-self: flex-end;
-}
-
-.title_coordonnees
-{
-    font-size: 60px;
-    color: rgba(223, 249, 251, 0.9);
-}
-
 .name
 {
-    font-size: 15vh;
-    margin-left: 5vh;
-    color: rgba(223, 249, 251, 0.9);
+    font-size: 10vh;
+    margin-left: 20vh;
 }
 
 .presentation
 {
-    display: flex;
-    flex-flow: row-reverse nowrap;
-    justify-content: space-between;
 }
 
 @media(max-width: 1700px) {
@@ -37,24 +20,14 @@
         text-align: start;
         font-size: 12vh;
     }
-
-    .title_coordonnees
-    {
-        margin-left: 5vh;
-    }
-
-    .contact
-    {
-        align-self: flex-start;
-    }
 }
 
 .photo
 {
-    align-self: center;
     width: 25vh;
     height: 25vh;
-    margin-left: 5vh;
+    margin-left: 40vh;
+    margin-top: 2vh;
     border-radius: 150px;
     border-style: solid;
     border-color: rgba(223, 249, 251, 0.9);
@@ -64,26 +37,17 @@
 .intro
 {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.title
+{
+    display: flex;
 }
 
 .presentation_text
 {
-    margin-left: 15vh;
-}
-
-.contact ul li
-{
-    list-style-type: none;
-}
-
-.email::before{
-    content: url("./Images/email_icon.PNG");
-    margin-right: 20px;
-}
-
-.phone::before{
-    content: url("./Images/phone_icon.PNG");
-    margin-right: 20px;
+    align-self: flex-start;
+    margin-left: 10vh;
+    font-size: 40px;
 }
