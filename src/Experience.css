@@ -44,9 +44,10 @@
 
 .carousel{
     margin-left: 2vh;
+    margin-right: 2vh;
 }
 
-@media(max-width: 1200px) {
+@media(max-width: 1250px) {
     .parcours
     {
         flex-direction: column;
@@ -56,6 +57,31 @@
     {
         text-align: center;
     }
+
+    .course
+    {
+        width: 100% !important;
+    }
+
+    .experience
+    {
+        width: 100% !important;
+    }
+
+    .rec.rec-carousel
+    {
+        justify-content: center;
+    }
+}
+
+.course
+{
+    width: 50%;
+}
+
+.experience
+{
+    width: 50%;
 }
 
 .rec.rec-slider-container{

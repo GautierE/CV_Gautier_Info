@@ -1,7 +1,11 @@
 .contact p
 {
-    display: inline;
-    font-size: 40px;
+    font-size: 25px;
+}
+
+.contact
+{
+    background-color: rgba(25, 42, 86, 0.9);
 }
 
 .title_coordonnees
@@ -10,14 +14,61 @@
     margin-left: 5vh;
 }
 
+.github_icon
+{
+    padding-left: 5vh;
+    width: 15%;
+}
+.coordonnees
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
 .email::before{
     content: url("./Images/email_icon.PNG");
-    margin-left: 50px;
-    padding-right: 20px;
+    padding-right: 2vh;
 }
 
 .phone::before{
     content: url("./Images/phone_icon.PNG");
-    margin-left: 50px;
-    padding-right: 20px;
+    padding-right: 2vh;
+}
+
+.phone
+{
+    margin-left: 5vh;
+}
+
+.email
+{
+    margin-left: 5vh;
+}
+
+@media(min-width: 750px) {
+    .contact p
+    {
+        font-size: 45px;
+    }
+
+}
+
+@media(min-width: 1900px) {
+    .coordonnees
+    {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .phone
+    {
+        margin-left: 0;
+    }
+
+    .email
+    {
+        margin-left: 0;
+    }
 }

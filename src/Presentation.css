@@ -1,24 +1,42 @@
 .name
 {
-    font-size: 10vh;
-    margin-left: 20vh;
-}
-
-.presentation
-{
+    font-size: 8vh;
+    margin-left: 10vh;
 }
 
 @media(max-width: 1700px) {
-    .presentation
-    {
-        flex-direction: column-reverse;
-    }
 
     .name
     {
         margin-block-end: 0.2rem;
         text-align: start;
-        font-size: 12vh;
+        font-size: 6vh;
+    }
+}
+
+@media(max-width: 1300px) {
+    .name
+    {
+        margin-left: 5vh;
+    }
+}
+
+@media(max-width: 800px)
+{
+    .photo
+    {
+        margin-left: 2vw !important;
+        margin-right: 2vw;
+    }
+
+    .name
+    {
+        margin-left: 2vh;
+    }
+
+    .title
+    {
+        flex-direction: column;
     }
 }
 
@@ -26,7 +44,7 @@
 {
     width: 25vh;
     height: 25vh;
-    margin-left: 40vh;
+    margin-left: 10vw;
     margin-top: 2vh;
     border-radius: 150px;
     border-style: solid;

@@ -1,7 +1,7 @@
 import React from "react";
 import './Hobbies.css';
 import skatePhoto from './Images/skatePhoto.jpg';
-import Fncs from './Images/FNCS_S3C2.png';
+import Fncs from './Images/FNCS_S3C2.jpg';
 
 const Hobbies = () => (
     <>
@@ -30,7 +30,9 @@ const Hobbies = () => (
                     <p className={'desc_games'}>
                         Fortnite:
                         <br/>
-                        Collaboration avec des inconnus pour atteindre un but commun.
+                        Collaboration avec des inconnus
+                        <br/>
+                        pour atteindre un but commun.
                         <br/>
                         <br/>
                         Modération Garry's Mod:

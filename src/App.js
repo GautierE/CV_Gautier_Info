@@ -3,11 +3,16 @@ import './Experience.css';
 import './Contact.css';
 import React, {Component} from "react";
 import Carousel from 'react-elastic-carousel';
+import gitHub from './Images/github.png';
 
 import Presentation from './Presentation.js';
 import Skills from './Skills';
 import Hobbies from './Hobbies';
 
+const hyperLinkWebCD = '<a target="_blank" rel="noreferrer"  href="https://www.webcd.fr/">WebCD</a>'
+const hyperLinkObernai = '<a target="_blank" rel="noreferrer"  href="https://www.imaginons-obernai.com/">Imaginons Obernai</a>'
+const hyperLinkProject = '<a target="_blank" rel="noreferrer"  href="https://docs.google.com/document/d/1JSG-GBygExHQv-xn9G6eZH-PkSvTyystNQkAVYPOJs4/edit?usp=sharing">Projet de terminale</a>'
+const hyperLinkDutProject = '<a target="_blank" rel="noreferrer"  href="https://gitlab.unistra.fr/les-champions-projet-t3/t432_liy20_t3_b/-/tree/master">Projet tutoré</a>'
 
 class App extends Component {
     constructor(props) {
@@ -15,12 +20,12 @@ class App extends Component {
 
         this.state = {
             experienceArray: [
-                ['Liste électorale municipale', ['Présence sur la liste électorale "Imaginons Obernai"'], '2020'],
-                ['Stage découverte', ['WebCd, entreprise de développement web'], '2015']
+                ['Liste électorale municipale', [`Présence sur la liste électorale ${hyperLinkObernai}`], '2020'],
+                ['Stage découverte', [`- ${hyperLinkWebCD}, entreprise de développement web`, '- Organisation d\'un projet en entreprise'], '2015']
             ],
             courseArray: [
-                ['DUT Informatique', ['-Programmation Web côté client & serveur', '-Projet tutoré sur un jeu sérieux'], '2019 - 2021'],
-                ['BAC S-SI Mention Bien', ['- Lycée Freppel à Obernai', '- Projet de terminale: prothèse de jambe automatisé programmé en Arduino'], '2016 - 2019'],
+                ['DUT Informatique', ['- Programmation Web côté client & serveur', '- Gestion de projet', `- ${hyperLinkDutProject} sur un jeu sérieux`], '2019 - 2021'],
+                ['BAC S-SI Mention Bien', ['- Lycée Freppel à Obernai', `- ${hyperLinkProject} : prothèse de jambe automatisé programmé en Arduino`], '2016 - 2019'],
             ],
             courseArraySelectedIndex: 0,
             experienceArraySelectedIndex: 0,
@@ -59,7 +64,7 @@ class App extends Component {
                 </div>
 
                 <div>
-                    <ContactDetails></ContactDetails>
+                    <ContactDetails />
                 </div>
 
             </div>
@@ -115,10 +120,10 @@ const Experience = ({experienceArray, courseArray, experienceSelectedIndex, cour
                                         <p className={'stage_date'}>{stage[2]}</p>
                                         <p className={'description'}>
                                             {
-                                                experienceArray[experienceSelectedIndex][1].map((line, sentenceIndex) => (
+                                                experienceArray[experienceSelectedIndex][1].map((line) => (
                                                     <>
                                                         <br/>
-                                                        <span key={sentenceIndex}>{line}</span>
+                                                        <span dangerouslySetInnerHTML={{ __html: line }} key={line.id}></span>
                                                     </>
                                                 ))
                                             }
@@ -149,10 +154,10 @@ const Experience = ({experienceArray, courseArray, experienceSelectedIndex, cour
                                         <p className={'stage_date'}>{stage[2]}</p>
                                         <p className={'description'}>
                                             {
-                                                courseArray[courseSelectedIndex][1].map((line, sentenceIndex) => (
+                                                courseArray[courseSelectedIndex][1].map((line) => (
                                                     <>
                                                         <br/>
-                                                        <span key={sentenceIndex}>{line}</span>
+                                                        <span dangerouslySetInnerHTML={{ __html: line }}  key={line.id}></span>
                                                     </>
                                                 ))
                                             }
@@ -171,8 +176,13 @@ const Experience = ({experienceArray, courseArray, experienceSelectedIndex, cour
 const ContactDetails = () => (
     <div className={'contact'}>
         <h3 className={'title_coordonnees'}>Contact</h3>
-        <p className={'email'}>gautier.edel.info@gmail.com</p>
-        <p className={'phone'}>+33 6 98 67 45 73</p>
+        <div className={'coordonnees'}>
+            <p className={'email'}>gautier.edel.info@gmail.com</p>
+            <p className={'phone'}>+33 6 98 67 45 73</p>
+        </div>
+            <a  target="_blank" rel="noreferrer" href='https://github.com/GautierE'>
+                <img className='github_icon 'src={gitHub} alt="gitHub"/>
+            </a>
     </div>
 )
 

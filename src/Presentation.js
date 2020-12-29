@@ -6,7 +6,7 @@ const Presentation = () => {
     const Intro = () => (
         <div className={'intro'}>
             <div className={'title'}>
-                <h2 className={'name'}>Stage Web</h2>
+                <h2 className={'name'}>Stage développement Web</h2>
                 <img src={photo} alt={'Presentation'} className={'photo'}/>
             </div>
             <p className={'presentation_text'}>

@@ -1,15 +1,20 @@
 .hobbies
 {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.content{
+    display: flex;
+    flex-direction: column;
 }
 
-@media(max-width: 1760px) {
+
+@media(min-width: 1200px) {
     .hobbies
     {
-        flex-direction: column;
-        flex-wrap: wrap;
+        flex-direction: row;
+        flex-wrap: nowrap;
     }
 
     .content
@@ -19,36 +24,27 @@
 
     .skate
     {
-        margin-left: 1vh !important;
+        margin-left: 5vh !important;
     }
 
     .video_games
     {
-        margin-left: 1vh !important;
+        margin-left: 5vh !important;
     }
 
     .desc
     {
-        margin-left: 2vh !important;
+        margin-left: 4vh !important;
     }
 
     .desc_games
     {
-        margin-left: 2vh !important;
+        margin-left: 4vh !important;
     }
 
-    .fn_photo
-    {
-        align-self: center;
-    }
-
-    .skate_photo
-    {
-        align-self: center;
-    }
 }
 
-@media(min-width: 1300px) {
+@media(min-width: 1700px) {
     .hobbies
     {
         flex-direction: row;
@@ -75,41 +71,39 @@
     border-color: rgba(210, 218, 226, 1.0);
     border-width: 7px;
     margin-bottom: 10px;
+    align-self: center;
 }
 
 .fn_photo
 {
-    width: 270px;
-    height: 263px;
+    width: 308px;
+    height: 412px;
     border-radius: 60px;
     border-style: solid;
     border-color: rgba(210, 218, 226, 1.0);
     border-width: 7px;
+    align-self: center;
 }
 
 .skate
 {
-    margin-left: 5vh;
+    margin-left: 1vh;
 }
 
 .video_games{
-    margin-left: 5vh;
-}
-
-.content{
-    display: flex;
+    margin-left: 1vh;
 }
 
 .desc{
     width: 450px;
     align-self: center;
     text-align: center;
-    margin-left: 4vh;
+    margin-left: 2vh;
 }
 
 .desc_games
 {
     align-self: center;
     text-align: center;
-    margin-left: 4vh;
+    margin-left: 2vh;
 }
