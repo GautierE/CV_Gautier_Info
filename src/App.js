@@ -9,10 +9,10 @@ import Presentation from './Presentation.js';
 import Skills from './Skills';
 import Hobbies from './Hobbies';
 
-const hyperLinkWebCD = '<a target="_blank" rel="noreferrer"  href="https://www.webcd.fr/">WebCD</a>'
-const hyperLinkObernai = '<a target="_blank" rel="noreferrer"  href="https://www.imaginons-obernai.com/">Imaginons Obernai</a>'
-const hyperLinkProject = '<a target="_blank" rel="noreferrer"  href="https://docs.google.com/document/d/1JSG-GBygExHQv-xn9G6eZH-PkSvTyystNQkAVYPOJs4/edit?usp=sharing">Projet de terminale</a>'
-const hyperLinkDutProject = '<a target="_blank" rel="noreferrer"  href="https://gitlab.unistra.fr/les-champions-projet-t3/t432_liy20_t3_b/-/tree/master">Projet tutoré</a>'
+const hyperLinkWebCD = '<a target="_blank" rel="noreferrer"  href="https://www.webcd.fr/" style="color: rgba(248, 194, 145,1.0)">WebCD</a>'
+const hyperLinkObernai = '<a target="_blank" rel="noreferrer"  href="https://www.imaginons-obernai.com/" style="color: rgba(248, 194, 145,1.0)">Imaginons Obernai</a>'
+const hyperLinkProject = '<a target="_blank" rel="noreferrer"  href="https://docs.google.com/document/d/1JSG-GBygExHQv-xn9G6eZH-PkSvTyystNQkAVYPOJs4/edit?usp=sharing" style="color: rgba(248, 194, 145,1.0)">Projet de terminale</a>'
+const hyperLinkDutProject = '<a target="_blank" rel="noreferrer"  href="https://gitlab.unistra.fr/les-champions-projet-t3/t432_liy20_t3_b/-/tree/master" style="color: rgba(248, 194, 145,1.0)">Projet tutoré</a>'
 
 class App extends Component {
     constructor(props) {
@@ -20,11 +20,11 @@ class App extends Component {
 
         this.state = {
             experienceArray: [
-                ['Liste électorale municipale', [`Présence sur la liste électorale ${hyperLinkObernai}`], '2020'],
+                ['Liste électorale municipale', [`Présence sur la liste électorale ${hyperLinkObernai}`, 'Recherche de solutions optimales en groupe'], '2020'],
                 ['Stage découverte', [`- ${hyperLinkWebCD}, entreprise de développement web`, '- Organisation d\'un projet en entreprise'], '2015']
             ],
             courseArray: [
-                ['DUT Informatique', ['- Programmation Web côté client & serveur', '- Gestion de projet', `- ${hyperLinkDutProject} sur un jeu sérieux`], '2019 - 2021'],
+                ['DUT Informatique', ['- Programmation Web côté client & serveur', '- Gestion de projet (SCRUM)', `- ${hyperLinkDutProject} sur un serious game`], '2019 - 2021'],
                 ['BAC S-SI Mention Bien', ['- Lycée Freppel à Obernai', `- ${hyperLinkProject} : prothèse de jambe automatisé programmé en Arduino`], '2016 - 2019'],
             ],
             courseArraySelectedIndex: 0,
@@ -114,20 +114,20 @@ const Experience = ({experienceArray, courseArray, experienceSelectedIndex, cour
                             }
                         >
                             {
-                                experienceArray.map((stage, index) => (
-                                    <div className={'carousel_item'} key={index}>
+                                experienceArray.map((stage, stageIndex) => (
+                                    <div className={'carousel_item'} key={stageIndex}>
                                         <p className={'stage_name'}>{stage[0]}</p>
                                         <p className={'stage_date'}>{stage[2]}</p>
-                                        <p className={'description'}>
+                                        <div className={'description'}>
                                             {
-                                                experienceArray[experienceSelectedIndex][1].map((line) => (
-                                                    <>
+                                                experienceArray[experienceSelectedIndex][1].map((line, lineIndex) => (
+                                                    <div key={lineIndex}>
                                                         <br/>
                                                         <span dangerouslySetInnerHTML={{ __html: line }} key={line.id}></span>
-                                                    </>
+                                                    </div>
                                                 ))
                                             }
-                                        </p>
+                                        </div>
                                     </div>
                                 ))
                             }
@@ -148,20 +148,20 @@ const Experience = ({experienceArray, courseArray, experienceSelectedIndex, cour
                             }
                         >
                             {
-                                courseArray.map((stage, index) => (
-                                    <div className={'carousel_item'} key={index}>
+                                courseArray.map((stage, stageIndex) => (
+                                    <div className={'carousel_item'} key={stageIndex}>
                                         <p className={'stage_name'}>{stage[0]}</p>
                                         <p className={'stage_date'}>{stage[2]}</p>
-                                        <p className={'description'}>
+                                        <div className={'description'}>
                                             {
-                                                courseArray[courseSelectedIndex][1].map((line) => (
-                                                    <>
+                                                courseArray[courseSelectedIndex][1].map((line, lineIndex) => (
+                                                    <div key={lineIndex}>
                                                         <br/>
-                                                        <span dangerouslySetInnerHTML={{ __html: line }}  key={line.id}></span>
-                                                    </>
+                                                        <span dangerouslySetInnerHTML={{ __html: line }}></span>
+                                                    </div>
                                                 ))
                                             }
-                                        </p>
+                                        </div>
                                     </div>
                                 ))
                             }
@@ -179,10 +179,11 @@ const ContactDetails = () => (
         <div className={'coordonnees'}>
             <p className={'email'}>gautier.edel.info@gmail.com</p>
             <p className={'phone'}>+33 6 98 67 45 73</p>
-        </div>
-            <a  target="_blank" rel="noreferrer" href='https://github.com/GautierE'>
-                <img className='github_icon 'src={gitHub} alt="gitHub"/>
+            <a target="_blank" rel="noreferrer" href={"https://github.com/GautierE"} className={'github_link'}>
+                <img className='github_icon' src={gitHub} alt="gitHub"/>
             </a>
+            <p className={'birth'}>26/01/2002, Permis B2</p>
+        </div>
     </div>
 )
 

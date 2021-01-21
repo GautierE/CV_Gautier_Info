@@ -16,7 +16,7 @@ const Skills = () => {
                 label={({ dataEntry }) => dataEntry.value}
                 labelStyle={{
                     fontSize: '32px',
-                    fill: 'rgba(237, 76, 103, 0.9)',
+                    fill: 'rgba(248, 194, 145,1.0)',
 
                 }}
                 labelPosition={0}

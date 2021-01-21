@@ -13,11 +13,37 @@ import winform from "./Programming_languages_icons/Net_icon.png";
 import oracle from "./Programming_languages_icons/Oracle_icon.png";
 import unity from "./Programming_languages_icons/Unity_icon.png";
 import uml from "./Programming_languages_icons/UML_icon.png";
+import excel from "./Programming_languages_icons/excel.png";
+import git from "./Programming_languages_icons/git.png";
+import jetbrains from "./Programming_languages_icons/jetbrains.png";
+import starUml from "./Programming_languages_icons/staruml.png";
+import visualStudio from "./Programming_languages_icons/visualstudio.png";
+import node from "./Programming_languages_icons/node.png";
 
-const iconsArray = [react, js, css, html, php, laravel, cSharp, java, bash, c, winform, oracle,  unity, uml]
+const skillsArray = [
+    [react],
+    [node],
+    [js],
+    [css],
+    [html],
+    [php],
+    [laravel],
+    [cSharp],
+    [java],
+    [bash],
+    [c],
+    [winform],
+    [oracle],
+    [git],
+    [uml],
+    [unity],
+    [jetbrains],
+    [starUml],
+    [visualStudio],
+    [excel],
+]
 
-class ProgrammingLanguages extends Component
-{
+class ProgrammingLanguages extends Component {
     constructor(props) {
         super(props);
         this.handleMouseHover = this.handleMouseHover.bind(this);
@@ -36,25 +62,24 @@ class ProgrammingLanguages extends Component
         };
     }
 
-    render()
-    {
+
+    render() {
         return (
             <div>
-            <h3 className={'title_skills'}>Compétences</h3>
-            <div className={'icons'}>
-                {
-                    iconsArray.map((srcIcon, index) => (
-                        <>
-                            <img src={srcIcon} alt={"icon"} key={index} className={'icon'}
-                                 onMouseEnter={this.handleMouseHover}
-                                 onMouseLeave={this.handleMouseHover}
-                            />
-                            {/* {this.state.isHovering && <div>Hovering right meow! 🐱</div>} */}
-                        </>
-                    ))
-                }
+                <h3 className={'title_skills'}>Compétences</h3>
+                <div className={'icons'}>
+                    <>
+                        {
+                            skillsArray.map((skill, index) => (
+                                <img key={index} src={skill} alt={"icon"} className={'icon'}
+                                     onMouseEnter={this.handleMouseHover}
+                                     onMouseLeave={this.handleMouseHover}
+                                />
+                            ))
+                        }
+                    </>
+                </div>
             </div>
-        </div>
         )
     }
 }

@@ -6,15 +6,16 @@ const Presentation = () => {
     const Intro = () => (
         <div className={'intro'}>
             <div className={'title'}>
-                <h2 className={'name'}>Stage développement Web</h2>
+                <h2 className={'title_text'}>Stage développement Web</h2>
                 <img src={photo} alt={'Presentation'} className={'photo'}/>
             </div>
             <p className={'presentation_text'}>
-                Gautier EDEL, 26/01/2002, Permis B2<br/>
+                <b className={'name'}>Gautier EDEL</b>
+                <br/>
                 <br/>
                 Étudiant en deuxième année de DUT Informatique,<br/>
-                je recherche un stage de dix semaines dans le domaine<br/>
-                du Web afin de pouvoir finaliser mon DUT.
+                je recherche un stage de dix semaines (Avril à Juin) dans<br/>
+                le domaine du Web afin de pouvoir finaliser mon DUT.
             </p>
         </div>
     )

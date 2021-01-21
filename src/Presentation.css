@@ -1,12 +1,18 @@
-.name
+.title_text
 {
     font-size: 8vh;
-    margin-left: 10vh;
+    align-self: center;
+    margin-left: 45vh;
+}
+
+.name
+{
+    font-size: 7vh;
 }
 
 @media(max-width: 1700px) {
 
-    .name
+    .title_text
     {
         margin-block-end: 0.2rem;
         text-align: start;
@@ -14,8 +20,12 @@
     }
 }
 
-@media(max-width: 1300px) {
-    .name
+@media(max-width: 1400px) {
+    .presentation_text
+    {
+        margin-left: 5vh !important;
+    }
+    .title_text
     {
         margin-left: 5vh;
     }
@@ -29,7 +39,7 @@
         margin-right: 2vw;
     }
 
-    .name
+    .title_text
     {
         margin-left: 2vh;
     }
@@ -50,6 +60,7 @@
     border-style: solid;
     border-color: rgba(223, 249, 251, 0.9);
     border-width: 7px;
+    margin-right: 0.5vh;
 }
 
 .intro

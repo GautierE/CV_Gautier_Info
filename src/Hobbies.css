@@ -1,3 +1,9 @@
+.title_loisirs
+{
+    font-size: 50px;
+    margin-left: 5vh;
+}
+
 .hobbies
 {
     display: flex;
@@ -56,12 +62,6 @@
     }
 }
 
-.title_loisirs
-{
-    font-size: 60px;
-    margin-left: 5vh;
-}
-
 .skate_photo {
     height: 396px;
     width: 324px;
@@ -106,4 +106,21 @@
     align-self: center;
     text-align: center;
     margin-left: 2vh;
+}
+
+.gmod_text::after
+{
+    content: url("./Images/Gmod_icon.png");
+    padding-left: 1vh;
+}
+
+.fn_text::after
+{
+    content: url("./Images/Fn_icon.jpg");
+    padding-left: 1vh;
+}
+
+.hobby_title
+{
+    font-size: 40px;
 }

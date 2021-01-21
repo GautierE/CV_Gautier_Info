@@ -28,20 +28,24 @@ const Hobbies = () => (
                 <div className={'content'}>
                     <img className={'fn_photo'} src={Fncs} alt={'FNCS logo'}/>
                     <p className={'desc_games'}>
-                        Fortnite:
+                        <span>
+                            <b className={'fn_text'}>Fortnite</b>
+                            <br/>
+                            Collaboration avec des inconnus
+                            <br/>
+                            pour atteindre un but commun.
+                        </span>
                         <br/>
-                        Collaboration avec des inconnus
                         <br/>
-                        pour atteindre un but commun.
-                        <br/>
-                        <br/>
-                        Modération Garry's Mod:
-                        <br/>
-                        3h/jour pendant un an
-                        <br/>
-                        Résolution des conflits entre joueurs
-                        <br/>
-                        Respect d'une organisation hiérarchique
+                        <span >
+                            Modération <b className={'gmod_text'}>Garry's Mod</b>
+                            <br/>
+                            3h/jour pendant un an
+                            <br/>
+                            Résolution des conflits entre joueurs
+                            <br/>
+                            Respect d'une organisation hiérarchique
+                        </span>
                     </p>
                 </div>
             </div>
