@@ -16,12 +16,12 @@
 
 .background
 {
-  background: url("./Images/background cv.png") repeat;
+  background: url("./Images/background_cv.png") repeat;
   animation: cloud linear 120s infinite;
   background-position: 0 0;
   position: absolute;
   width: 25000px;
-  height: 4000px;
+  height: 6500px;
   top: 0;
   left: -1800px;
   z-index: -1;

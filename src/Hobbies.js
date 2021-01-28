@@ -33,7 +33,7 @@ const Hobbies = () => (
                             <br/>
                             Collaboration avec des inconnus
                             <br/>
-                            pour atteindre un but commun.
+                            pour atteindre un but commun
                         </span>
                         <br/>
                         <br/>

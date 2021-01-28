@@ -20,7 +20,7 @@ class App extends Component {
 
         this.state = {
             experienceArray: [
-                ['Liste électorale municipale', [`Présence sur la liste électorale ${hyperLinkObernai}`, 'Recherche de solutions optimales en groupe'], '2020'],
+                ['Liste électorale municipale', [`- Présence sur la liste électorale ${hyperLinkObernai}`, '- Recherche de solutions optimales en groupe'], '2020'],
                 ['Stage découverte', [`- ${hyperLinkWebCD}, entreprise de développement web`, '- Organisation d\'un projet en entreprise'], '2015']
             ],
             courseArray: [
@@ -122,7 +122,6 @@ const Experience = ({experienceArray, courseArray, experienceSelectedIndex, cour
                                             {
                                                 experienceArray[experienceSelectedIndex][1].map((line, lineIndex) => (
                                                     <div key={lineIndex}>
-                                                        <br/>
                                                         <span dangerouslySetInnerHTML={{ __html: line }} key={line.id}></span>
                                                     </div>
                                                 ))
@@ -156,7 +155,6 @@ const Experience = ({experienceArray, courseArray, experienceSelectedIndex, cour
                                             {
                                                 courseArray[courseSelectedIndex][1].map((line, lineIndex) => (
                                                     <div key={lineIndex}>
-                                                        <br/>
                                                         <span dangerouslySetInnerHTML={{ __html: line }}></span>
                                                     </div>
                                                 ))
