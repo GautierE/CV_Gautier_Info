@@ -1,1 +1,1 @@
-This project's goal is to provide a website serving as a Curriculum vitæ using ReactJS and CSS.
+This project's goal is to provide a website serving as a Curriculum vitæ using React and CSS.
